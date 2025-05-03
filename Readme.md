@@ -4,9 +4,9 @@ Kinetics is a collection of large-scale, high-quality datasets of URL links of u
 
 The bash script is derived from the official Common Visual Data Foundation downloader, that can be found here: https://github.com/cvdfoundation/kinetics-dataset
 
-This downloader retrieves the official kinetics-400 validation set, made of 19881 videos, and cleans the dataset from the officialy listed corrupted videos, aswell as the ones detected by openCV.
+This downloader retrieves the official kinetics-400 **validation set**, made of 19881 videos, and optionally cleans the dataset from the officialy listed corrupted videos, aswell as the ones detected by OpenCV.
 
-## Dataset Information
+## Validation-Set Information
 
 Nb of videos: 19881
 
@@ -14,7 +14,7 @@ Nb of corrupted videos from annotations "is_cc": 519
 
 Nb of corrupted videos from OpenCV: 4
 
-## Download Validation Dataset: 
+## How To Use: 
 
 ### Clone repo and enter directory
 ```
@@ -33,7 +33,7 @@ bash ./download_k400_val.sh
 ```
 
 
-## (Optional) Clean Validation Dataset:
+## Optional: Clean Dataset:
 
 This will remove the 514 videos flagged as corrupt by the official kinetics dataset, aswell as the 4 videos that are detected corrupt by OpenCV. 
 
@@ -44,6 +44,11 @@ Windows:
 ```
 python -m venv venv
 venv\Scripts\activate.bat
+```
+Linux:
+```
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 ### Install python dependencies
