@@ -10,7 +10,6 @@ from tqdm.contrib.concurrent import process_map
 # === Settings ===
 VIDEO_DIR     = './k400/val'
 VAL_CSV_PATH  = './k400/annotations/val.csv'
-OUTPUT_DIR    = './scan_results'
 CORRUPTED_DIR = './k400/corrupted'
 
 # === Load annotations & build filename set ===
@@ -42,7 +41,6 @@ def check_video(path):
     return fname, corrupted
 
 if __name__ == '__main__':
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(CORRUPTED_DIR, exist_ok=True)
 
     # 1) Move Kinetics-flagged CC videos
